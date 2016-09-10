@@ -12,6 +12,8 @@ module.exports = {
 
     // mta.status returns a JSON arr with details for each subway line
     mta.status('subway').then(function (result) {
+
+      /* PLACEHOLDER TEXT FOR DEBUGGING
       result.push({ //PLACEHOLDER
         status : 'DELAYS',
         name : 'NUM1',
@@ -54,6 +56,7 @@ module.exports = {
               <br></div></b><br/>\
               <br/><br/>'
       })
+      */
 
       for(var i = 0; i< result.length; i++) {
         if(result[i].status === "DELAYS" || result[i].status === "PLANNED WORK") {
