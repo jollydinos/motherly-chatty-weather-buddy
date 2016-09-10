@@ -7,7 +7,7 @@ A handy weather app delivering customizable weather forecasts and helpful recomm
       &nbsp;&nbsp;- Loads goGet factory, runs its getWeatherData function =>  
       &nbsp;&nbsp;- Makes a GET request to /api/weather =>  
   SERVER-SIDE  
-    (Router picks up on this)  
+    &nbsp;&nbsp;(Router picks up on this)  
     WEATHER CONTROLLER  
       &nbsp;&nbsp;- Makes a GET request to https://api.forecast.io =>  
       &nbsp;&nbsp;- Receives back a huge object with tons of forecasting info =>  
@@ -47,9 +47,24 @@ A handy weather app delivering customizable weather forecasts and helpful recomm
       router.js           --> event handlers for components from DB and
                                   data from API
 
-## Features added by the Dinos
+## Features Added by the Dinos
   ### FEATURE: MTA info
+    After clicking  a subway alert, detailed information pops up from the MTA website
   ### FEATURE: Hourly weather report
+    After clicking "Hourly Weather", information about weather in upcoming hours will appear
   ### FEATURE: Music
+    Music related to the current weather will play
   ### FIX: Food & Activity page formatting
+    Text no longer pops out of the bubbles on the food & activity page boxes
   ### FIX: Scrollbar
+    If content exceeds the boundaries of the browser, a scrollbar will appear
+
+## Known Bugs
+  - Need to click MTA link twice to load them
+  - Multiple MTA popovers can be opened at a time
+  - Main bubble's arrow overlaps MTA popover
+
+
+## Planned Improvements
+  - Fahrenheit/Celsius toggle
+  - Improved song selection
