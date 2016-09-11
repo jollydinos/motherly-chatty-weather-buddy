@@ -58,7 +58,7 @@ angular.module('chattyWeather.weather', ['ui.bootstrap'])
     var date = new Date();
     var newHour;
     var hour =  date.getHours();
-     for(var i = 0; i < 6; i++){
+     for(var i = 0; i < 5; i++){
        $scope.hourNow = date.setHours(++hour);
       var amPm = (hour > 11) ? "PM" : "AM";
       console.log("HOUR", hour, amPm)
@@ -66,6 +66,7 @@ angular.module('chattyWeather.weather', ['ui.bootstrap'])
       space = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
   else
       space = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+
       $scope.hourlyTime.push((hour));
       $scope.hourlyTemp.push(Math.round(weatherData.hourlyTemp[i]));
       if($scope.hourlyTime[i] > 12){
