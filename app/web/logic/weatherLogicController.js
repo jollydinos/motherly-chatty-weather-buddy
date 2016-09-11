@@ -32,7 +32,9 @@ module.exports = {
       timezone: JSON.parse(req.body).timezone,
       temperatureNum: hourlyData[0].temperature,
       temperature: temperature,
-      weatherEvent: weatherEvent,
+      // weatherEvent: weatherEvent,
+      weatherEvent: 'clear-day',
+      // weatherEvent: 'cloudy',
       hourlyTemp: hourlyTemp,
       hourlyTime: hourlyTime,
       data: hourlyData.slice(1,7)

@@ -19,12 +19,6 @@ describe('Server', function() {
       .expect(200, done);
   });
 
-  it('should receive a 200 status code from "api/transportation"', function (done) {
-    // just assume that if it contains an <input> tag its index.html
-    request
-      .get('/api/transportation/')
-      .expect(200, done);
-  });
 
   it('should receive a 404 status code from nonexistent endpoint', function (done) {
     // just assume that if it contains an <input> tag its index.html
@@ -32,15 +26,30 @@ describe('Server', function() {
       .get('/bleebloo')
       .expect(404, done);
   });
+
+    it('should receive a 200 status code from "/api/phrases/"', function (done) {
+    // just assume that if it contains an <input> tag its index.html
+    request
+      .get('/api/phrases')
+      .expect(200, done);
+  });
+
+    it('should receive a 200 status code from "/api/activities/"', function (done) {
+    // just assume that if it contains an <input> tag its index.html
+    request
+      .get('/api/activities')
+      .expect(200, done);
+  });
+    
 });
 
 // describe('Functions', function() {
-//
+
 //   it('should have function ', function (done) {
 //     // just assume that if it contains an <input> tag its index.html
 //     request
-//       .get('/bleebloo')
+//       .get('/')
 //       .expect(404, done);
 //   });
-//
-// });
+
+//});
